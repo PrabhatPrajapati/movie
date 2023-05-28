@@ -1,7 +1,7 @@
 ﻿numpy
 pandas
 matplotlib
-sklearn
+scikit-learn
 streamlit
 joblib
 
