@@ -1,27 +1,6 @@
-# import streamlit as st
+
 import pandas as pd
 import joblib
-# similarity=joblib.load("similarity.pkl")
-# st.title("Movie Recommender System")
-# movie=pd.read_csv("tmdb_5000_movies.csv")
-# name=movie["title"].values
-# option = st.selectbox(
-#      'How would you like to be contacted?',
-#      name)
-
-# def recommendaction(name):
-#     movie_index=movie[movie["title"]==name].index[0]
-#     distance=similarity[movie_index]
-#     movie_list=sorted(list(enumerate(distance)),reverse=True,key=lambda X:X[1])[1:6]
-#     recommanded_movie=[]
-#     for i in movie_list:
-#         recommanded_movie.append(movie.iloc[i[0]].title)
-#     return recommanded_movie
-
-# if st.button("Recommend"):
-#     recommand=recommendaction(option)
-#     for i in recommand:
-#         st.write(i)
 
 
 import pickle
@@ -38,6 +17,8 @@ with col3:
     st.markdown("[Github](https://github.com/PrabhatPrajapati)")
 with col4:
     st.markdown("[leetcode](https://leetcode.com/prabhat1999/)")
+with col5:
+    st.markdown("[portfolio](https://prabhatprajapati.github.io/portfolio/)")
 
 st.sidebar.title("Movie Recommender System")
 
@@ -118,6 +99,29 @@ if st.button('Show Recommendation'):
         st.image(recommended_movie_posters[4])
 
 
+import webbrowser
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: visible;}
+            footer:after{
+                background-color:#728FCE;
+                font-size:12px;
+                font-weight:5px;
+                height:30px;
+                margin:1rem;
+                padding:0.8rem;
+                content:'Copyright © 2022 : Prabhat Kumar';
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                color:white;
+            }
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 
